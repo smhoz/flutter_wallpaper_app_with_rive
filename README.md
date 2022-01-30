@@ -1,16 +1,13 @@
-# wallpaper_app
+# Flutter Wallpaper App With Rive Animations
 
-Wallpaper App
+in this project I made a simple wallpaper app using rive animation.
 
-## Getting Started
+In the project, loading photos using pagination and I used easy localization.
+In addition, I used animated container and part of part.
 
-This project is a starting point for a Flutter application.
+![1](https://user-images.githubusercontent.com/78686891/151695292-1c5c6abb-c538-43de-a214-81490d480e11.png)
 
-A few resources to get you started if this is your first Flutter project:
+https://user-images.githubusercontent.com/78686891/151695793-80406bf5-41f8-4d9a-81e5-b5a8337803d6.mp4
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+
