@@ -12,10 +12,7 @@ class NavigationRoute {
   Route<dynamic> onGenerateRoute(RouteSettings args) {
     switch (args.name) {
       case NavigationConstants.DEFAULT:
-        return normalNavigate(const HomeView(), NavigationConstants.TEST_VIEW);
-
-      case NavigationConstants.TEST_VIEW:
-        return normalNavigate(const HomeView(), NavigationConstants.TEST_VIEW);
+        return normalNavigate(const HomeView(), NavigationConstants.DEFAULT);
 
       case NavigationConstants.SEARCH_VIEW:
         return normalNavigate(
