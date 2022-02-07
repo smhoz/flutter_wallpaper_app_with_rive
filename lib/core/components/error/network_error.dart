@@ -1,14 +1,19 @@
 import 'package:flutter/material.dart';
 
-import '../../constants/app/assets_constant.dart';
 import '../../extension/context_extension.dart';
 import '../../extension/extensions.dart';
 
 class NetworkError extends StatelessWidget {
   final String errorMessage;
-  final VoidCallback onTap;
+  final String? assetPath;
+  final VoidCallback? onTap;
+  final String? buttonText;
   const NetworkError(
-      {Key? key, required this.errorMessage, required this.onTap})
+      {Key? key,
+      required this.errorMessage,
+      this.onTap,
+      this.assetPath,
+      this.buttonText})
       : super(key: key);
 
   @override
@@ -19,20 +24,24 @@ class NetworkError extends StatelessWidget {
         children: [
           Column(
             children: [
-              Image.asset(AssetsConstant.errorPng),
+              if (assetPath != null) ...[
+                Image.asset(assetPath!),
+              ],
               Text(
-                errorMessage + " Error\n" + "pleaseTryAgainLater".locale,
+                errorMessage,
                 textAlign: TextAlign.center,
                 style: context.textTheme.bodyText2,
               ),
             ],
           ),
-          ElevatedButton(
-              onPressed: onTap,
-              child: Text(
-                "goback".locale,
-                style: context.textTheme.bodyText1,
-              ))
+          if (onTap != null) ...[
+            ElevatedButton(
+                onPressed: onTap,
+                child: Text(
+                  buttonText ?? "Go Back",
+                  style: context.textTheme.bodyText1,
+                ))
+          ]
         ],
       ),
     );
