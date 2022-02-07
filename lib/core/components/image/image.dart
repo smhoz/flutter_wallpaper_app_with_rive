@@ -31,4 +31,5 @@ class CustomNetworkImage extends StatelessWidget {
       ),
     );
   }
+    if (loadingProgress == null) return child;
 }
