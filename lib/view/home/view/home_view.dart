@@ -32,6 +32,7 @@ import '../../../core/init/navigation/navigation_service.dart';
 import '../../../core/init/theme/colors/gradient_colors.dart';
 import '../model/photo_model.dart';
 import '../viewmodel/home_view_model.dart';
+import 'widgets/home_view_network_error.dart';
 
 part 'appbar/gradient_appbar.dart';
 part 'photo_view.dart';
@@ -49,6 +50,7 @@ class _HomeViewState extends BaseState<HomeView> {
   late final ScrollController scrollController;
   late final ScrollController gridViewScrollController;
   late final TextEditingController textEditingController;
+
   @override
   void initState() {
     super.initState();
@@ -83,7 +85,7 @@ class _HomeViewState extends BaseState<HomeView> {
         return Scaffold(
           floatingActionButton: _floatingActionButton(model),
           body: model.error != null
-              ? NetworkError(
+              ? HomeViewNetworkError(
                   errorMessage: model.error!,
                   onTap: model.errorClear,
                 )
